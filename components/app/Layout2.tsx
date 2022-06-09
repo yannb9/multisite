@@ -13,7 +13,7 @@ interface LayoutProps extends WithChildren {
   siteId?: string;
 }
 
-export default function Layout({ siteId, children }: LayoutProps) {
+export default function Layout2({ siteId, children }: LayoutProps) {
   const title = "Platforms on Vercel";
   const description =
     "Create a fullstack application with multi-tenancy and custom domains support using Next.js, Prisma, and PostgreSQL";
@@ -105,36 +105,7 @@ export default function Layout({ siteId, children }: LayoutProps) {
             </a>
           </div>
         </div>
-        {rootPage && (
-          <div className="absolute left-0 right-0 top-16 flex justify-center items-center font-cal space-x-16 border-b bg-white border-gray-200">
-            <Link href="/" passHref>
-              <a
-                className={`border-b-2 ${
-                  tab == "" ? "border-black" : "border-transparent"
-                } py-3`}
-              >
-                My Sites
-              </a>
-            </Link>
-            <Link href="/settings" passHref>
-              <a
-                className={`border-b-2 ${
-                  tab == "settings" ? "border-black" : "border-transparent"
-                } py-3`}
-              >
-                Settings
-              </a>
-            </Link>
-            <Link href="/new" passHref>
-              <a
-                className={`border-b-2 ${
-                  tab == "new" ? "border-black" : "border-transparent"
-                } py-3`}
-              >
-                New Page
-              </a>
-            </Link>
-          </div>
+        {rootPage && (<></>
         )}
         {sitePage && (
           <div className="absolute left-0 right-0 top-16 font-cal border-b bg-white border-gray-200">

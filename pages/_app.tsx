@@ -1,5 +1,6 @@
 import PlausibleProvider from "next-plausible";
 import { SessionProvider } from "next-auth/react";
+import { NextUIProvider } from '@nextui-org/react';
 
 import "@/styles/globals.css";
 
@@ -12,7 +13,9 @@ export default function App({
   return (
     <PlausibleProvider domain="demo.vercel.pub">
       <SessionProvider session={session}>
-        <Component {...pageProps} />
+        <NextUIProvider>
+          <Component {...pageProps} />
+        </NextUIProvider>
       </SessionProvider>
     </PlausibleProvider>
   );
